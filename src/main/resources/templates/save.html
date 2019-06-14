@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.org.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{'/student.css'}">
+    </head>
+    <body>
+        <form th:action="${'/user/new/'}" method="post">
+               <div class="contianer row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="id" placeholder="ID">
+                    </div><br>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="fname" placeholder="First name">
+                    </div><br>
+                   <div class="col-md-6">
+                       <input type="text" class="form-control" name="lname" placeholder="Last name">
+                    </div><br>
+                   <div class="col-md-6">
+                      <input type="text" class="form-control" name="dept" placeholder="Department">
+                    </div><br>
+                   <div class="col-md-6">
+                      <input type="text" class="form-control" name="degree" placeholder="Degree">
+                    </div>
+                  </div>
+            <input class="save-btn btn btn-primary" type="submit" value="Save"/>
+        </form>
+    </body>
+</html>
